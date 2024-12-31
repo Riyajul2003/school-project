@@ -1,0 +1,234 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#ev{
+    background: linear-gradient(250deg, #d551a9, #3cb371, #e08b6c, #008080, #06069a, #b80eb8);
+}
+.photo-ark img{
+    width: 100%;
+    
+}
+
+#tex{
+    position: absolute;
+    top: 40%;
+    left: 29%;
+    color: white;
+    font-size: 59px;
+    cursor: pointer;
+   
+}
+#eventText{
+    text-align: center;
+    margin: 9px 0px;
+    background-color: #6893e6;
+    padding: 12px;
+    color: white;
+    font-weight: 700;
+}
+
+#eventmemory{
+    text-align: center;
+    margin: -46px 0px;
+    background-color: #9442e1;
+    padding: 12px;
+    margin-top: 64px;
+    color: #10e9db;
+    font-weight: 700;
+}
+.eventStudent{
+    display: flex;
+    background-color:#eedfcc;
+    flex-direction: column;
+    height: 500px;
+}
+
+.firstCard, .secondCard{
+    display: flex;
+    flex-direction: row;
+}
+.card{
+    display: flex;
+    width: 50%;
+    height: 250px;
+    margin: 0px 20px;
+    box-shadow: 9px 9px rgb(74 61 61 / 20%);
+    background-color: #4a4040;
+    overflow: hidden;
+    border: 2px solid black;
+    margin-top: 15px;
+    color: white;
+}
+.card img{
+    width: 120%;
+    height: 247px;
+}
+
+.card_img{
+    width: 250px;
+    height: 250px;
+    box-shadow: 7px -9px 8px 2px rgb(109 74 102);
+    object-fit: cover;
+}
+
+.descard{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    /* display: grid; */
+}
+.card .descard h1{
+    margin-top: 15px;
+}
+.card .descard p{
+    margin-top: 45px;
+    text-align: left;
+    padding: 0 23px
+}
+
+.container{
+    display: grid;
+    place-items: center;
+    margin-inline: 0.5rem;
+    padding-block: 5rem;
+
+}
+.card_container{
+    /* display: grid;
+    row-gap: 3.5rem; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.card_artical{
+    position: relative;
+    overflow: hidden;
+    padding: 19px;
+}
+.card_img{
+    width: 328px;
+    border-radius: 1.5rem;
+}
+.card_data{
+    width: 280px;
+    background-color: #eedfcc;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 8px 24px hsla(0, 0%, 0%, .15);
+    border-radius: 1rem;
+    position: absolute;
+    bottom: -2rem;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+    opacity: 0;
+    transition: opacity 1s 1s;
+
+}
+.card_description{
+    display: block;
+    font-size: small;
+    margin-bottom: .25rem;
+}
+.card_title{
+    font-size: 23px;
+    font-weight: 500;
+    color: #6893e6;
+    margin-bottom: .75rem;
+}
+.card_button{
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 500px;
+    color: green;
+}
+.card_button:hover{
+    text-decoration: underline;
+    color: red;
+}
+.card_artical:hover .card_data{
+    animation: show_data 1s forwards;
+    opacity: 1;
+    transition: opacity .3s;
+
+}
+.card_artical:hover{
+    animation: remove-overflow 2s forwards;
+}
+.card_artical:not(:hover){
+    animation: remove_overflow 2s forwards;
+}
+
+.card_artical:not(:hover) .card_data{
+    animation: remove-data 1s forwards;
+}
+
+@keyframes show_data{
+    50%{
+        transform: translateY(-3rem);
+    }
+    100%{
+        transform: translateY(-4rem);
+    }
+}
+@keyframes remove-overflow{
+    to{
+        overflow: initial;
+    }
+}
+@keyframes remove-data{
+    0%{
+        transform: translateY(-7rem);
+    }
+    50%{
+        transform: translateY(-10rem);
+    }
+    100%{
+        transform: translateY(.5rem);
+    }
+}
+
+@keyframes remove_overflow{
+    0%{
+        overflow: initial;
+        pointer-events: none;
+    }
+    50%{
+        overflow: hidden;
+    }
+}
+
+
+/* 
+@media screen and (min-width: 1120px) {
+    .container{
+        height: 150vh;
+    }
+    .card_artical{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .card_img{
+        width: 348px;
+    }
+    .card_data{
+        width: 316px;
+        padding-inline: 2.5rem;
+    }
+} */
+
+@media (max-width: 480px){
+    #tex{
+       font-size: 30px; 
+    }
+
+    #tex{
+        position: absolute;
+        top: 17%;
+        left: 18%;
+        color: white;
+        /* font-size: 50px; */
+        cursor: pointer;
+       
+    }
+}
